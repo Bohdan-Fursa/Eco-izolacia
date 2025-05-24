@@ -7,10 +7,24 @@
     <link rel="preload" as="image" href="./assets/header-bg-desktop-DSnu_Slp.webp" type="image/webp" media="(min-width: 768px)">
     <link rel="preload" as="image" href="./assets/bg-header-mobile-3NlTH8c7.webp" type="image/webp" media="(max-width: 767px)">
     <link rel="shortcut icon" href="./assets/eco-izolacje-logo-mobile-CEZb_1RG.webp" type="image/x-icon">
-    <script type="module" crossorigin src="./assets/index-DcPWz52S.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Dhf1XLDO.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-76TWS33DT9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-76TWS33DT9');
+    </script>
+    <script type="module" crossorigin src="./assets/index-BvHvTyVE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DFUDzoNz.css">
   </head>
-  <body class="font-montserrat">
+  
+
+<body class="font-montserrat">
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 bg-white text-black px-6 py-4 rounded-xl shadow-lg text-sm flex flex-col md:flex-row justify-between items-center gap-2 z-50"
+       style="display: none;">
+    <span>Strona korzysta z plików cookies. <a href="#" class="underline text-blue-600">Więcej informacji</a></span>
+    <button onclick="acceptCookies()" class="bg-[#1E509B] text-white px-4 py-2 rounded hover:bg-blue-800 transition">Akceptuję</button>
+    </div>
     <header>
       <nav class="relative flex items-center justify-between px-4 py-2 mt-3 border-b-2 border-gray-100 pb-6 md:hidden">
         <div class="flex items-center">
@@ -410,5 +424,17 @@ Znajdź nas również:<br class="md:hidden">
 </p>
     </footer>
     <div id="app"></div>
+      <script>
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+    
+    window.addEventListener('load', () => {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+      }
+    });
+  </script>
   </body>
 </html>
